@@ -23,16 +23,16 @@ def minOperations(n):
     #    => since it will start with 1 "H", which cleanly divides n,
     #       it will first do Copy and Paste.
 
-    file = "H"
-    copier = ""
+    file = 1
+    copier = 0
     action = 0
 
     if n <= 1:
         return 0
 
     # As long as the number of H is not equal to n, run loop
-    while len(file) < n:
-        if n % len(file) == 0:
+    while file < n:
+        if n % file == 0:
             # copy "H"
             copier = file
             action += 1
