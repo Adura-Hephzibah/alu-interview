@@ -34,7 +34,7 @@ def minOperations(n):
     while len(file) < n:
         if n % len(file) == 0:
             # copy "H"
-            copier += file
+            copier = file
             action += 1
 
         # now you paste into file
